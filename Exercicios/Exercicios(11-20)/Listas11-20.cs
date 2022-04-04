@@ -53,5 +53,35 @@ namespace Exercicios.ExerciciosOnzeAVinte
             Console.WriteLine($"{lista.Max()} eh o maior");
         }
 
+        public void Exercicio14()
+        {
+            Console.Clear();
+            var valores = new float[2];
+
+            for (var i = 0; i < valores.Length; i++)
+            {
+                valores[i] = float.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("{0:f3} km/l", valores[0] / valores[1]);
+        }
+
+        public void Exercicio15()
+        {
+            Console.Clear();
+            var valores = new float[4];
+            for (var i = 0; i < valores.Length; i++)
+            {
+                valores[i] = float.Parse(Console.ReadLine());
+            }
+            var calc = Math.Pow(valores[2] - valores[0], 2) + Math.Pow(valores[3] - valores[1], 2);
+            Console.WriteLine("{0:f4}", Math.Sqrt(calc));
+        }
+
+        public void Exercicio16()
+        {
+            var valorKM = int.Parse(Console.ReadLine());
+            Console.WriteLine($"{valorKM * 2} minutos");
+        }
+
     }
 }

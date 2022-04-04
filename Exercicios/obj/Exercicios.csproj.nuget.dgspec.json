@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\LogicaProgramacao\\Exercicios\\Exercicios.csproj": {}
+    "C:\\Users\\samuel.lima\\Desktop\\Exercicios0-100\\Exercicios\\Exercicios.csproj": {}
   },
   "projects": {
-    "C:\\LogicaProgramacao\\Exercicios\\Exercicios.csproj": {
+    "C:\\Users\\samuel.lima\\Desktop\\Exercicios0-100\\Exercicios\\Exercicios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\LogicaProgramacao\\Exercicios\\Exercicios.csproj",
+        "projectUniqueName": "C:\\Users\\samuel.lima\\Desktop\\Exercicios0-100\\Exercicios\\Exercicios.csproj",
         "projectName": "Exercicios",
-        "projectPath": "C:\\LogicaProgramacao\\Exercicios\\Exercicios.csproj",
+        "projectPath": "C:\\Users\\samuel.lima\\Desktop\\Exercicios0-100\\Exercicios\\Exercicios.csproj",
         "packagesPath": "C:\\Users\\samuel.lima\\.nuget\\packages\\",
-        "outputPath": "C:\\LogicaProgramacao\\Exercicios\\obj\\",
+        "outputPath": "C:\\Users\\samuel.lima\\Desktop\\Exercicios0-100\\Exercicios\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
