@@ -83,5 +83,38 @@ namespace Exercicios.ExerciciosOnzeAVinte
             Console.WriteLine($"{valorKM * 2} minutos");
         }
 
+        public void Exercicio17()
+        {
+            Console.Clear();
+            var recebeValores = new float[2];
+            for (var i = 0; i < recebeValores.Length; i++)
+            {
+                recebeValores[i] = float.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("{0:f3}", (recebeValores[0] * recebeValores[1]) / 12);
+        }
+
+        public void Exercicio18()
+        {
+            Console.Clear();
+
+            var notas = new int[] { 100, 50, 20, 10, 5, 2, 1 };
+            var valorNotas = int.Parse(Console.ReadLine());
+
+            for (var i = 0; i < notas.Length; i++)
+            {
+                var quociente = valorNotas / notas[i];
+                Console.WriteLine($"{quociente} nota(s) de R$ {notas[i]},00");
+                valorNotas %= notas[i];
+            }
+        }
+
+        public void Exercicio19()
+        {
+            Console.Clear();
+            var tempo = new int[] { 3600, 60 };
+            var segundos = int.Parse(Console.ReadLine());
+            Console.WriteLine($"{segundos / tempo[0]}:{segundos / tempo[1]}:{segundos % tempo[1]}");
+        }
     }
 }
