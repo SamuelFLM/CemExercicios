@@ -1,8 +1,7 @@
-﻿using Exercicios.ExerciciosUmADez;
+﻿using Exercicios.Exercicios21_30;
 using Exercicios.ExerciciosOnzeAVinte;
-
 //Instancia a class e chama o exercicio para ver o result;
 
-var lista = new ListasOnzeAVinte();
 
-lista.Exercicio19();
+var listas = new Listas21_30();
+listas.Exercicio22();

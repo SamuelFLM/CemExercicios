@@ -116,5 +116,19 @@ namespace Exercicios.ExerciciosOnzeAVinte
             var segundos = int.Parse(Console.ReadLine());
             Console.WriteLine($"{segundos / tempo[0]}:{segundos / tempo[1]}:{segundos % tempo[1]}");
         }
+
+        public void Exercicio20()
+        {
+            Console.Clear();
+            int data = int.Parse(Console.ReadLine());
+
+            var ano = data / 365;
+            var mes = (data % 365) / 30;
+            var dia = (data % 365) % 30;
+
+            Console.WriteLine($"{ano} ano(s)");
+            Console.WriteLine($"{mes} mes(es)");
+            Console.WriteLine($"{dia} dia(s)");
+        }
     }
 }
