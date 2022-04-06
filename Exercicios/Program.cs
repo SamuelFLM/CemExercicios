@@ -4,4 +4,4 @@ using Exercicios.ExerciciosOnzeAVinte;
 
 
 var listas = new Listas21_30();
-listas.Exercicio22();
+listas.Exercicio23();
