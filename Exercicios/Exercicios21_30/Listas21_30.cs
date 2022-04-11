@@ -121,9 +121,141 @@ namespace Exercicios.Exercicios21_30
 
         public void Exercicio26()
         {
+            var notas = new float[4];
+            Console.Clear();
 
+            var n = 1;
+            for (var i = 0; i < notas.Length; i++)
+            {
+                Console.Write($"Notas {n++} : ");
+                notas[i] = float.Parse(Console.ReadLine());
+            }
+            var media = ((notas[0] * 2) + (notas[1] * 3) + (notas[2] * 4) + (notas[3] * 1)) / 10;
+
+            if (media >= 5.0 && media <= 6.9)
+            {
+                AlunoExame();
+            }
+            else if (media >= 7.0)
+            {
+                Console.WriteLine($"MEDIA : {media}");
+                Console.WriteLine("Aluno aprovado.");
+            }
+            else
+            {
+                Console.WriteLine($"MEDIA : {media}");
+                Console.WriteLine("Aluno reprovado");
+            }
+
+
+            void AlunoExame()
+            {
+                Console.Clear();
+
+                var notaExame = 6.4f;
+                Console.WriteLine($"MEDIA : {media}");
+                Console.WriteLine("Aluno em exame.");
+                Console.WriteLine($"Nota do exame: {notaExame}");
+                if ((notaExame + media) / 2 >= 5.0)
+                {
+                    Console.WriteLine("Aluno aprovado.");
+                    Console.WriteLine($"Media final: {(notaExame + media) / 2}");
+                }
+                else
+                {
+                    Console.WriteLine("Aluno reprovado.");
+                    Console.WriteLine($"Media final: {(notaExame + media) / 2}");
+                }
+            }
         }
 
+        public void Exercicio27()
+        {
+            Console.Clear();
+            var eixos = new float[2];
+            var quadrantes = new string[] { "Q1", "Q2", "Q3", "Q4" };
 
+            for (var i = 0; i < eixos.Length; i++)
+            {
+                eixos[i] = float.Parse(Console.ReadLine());
+            }
+
+            ReturnQuadrante(eixos[0], eixos[1]);
+
+            void ReturnQuadrante(float eixoX, float eixoY)
+            {
+                if (eixoX > 0.0 && eixoY < 0.0)
+                    Console.WriteLine(quadrantes[3]);
+                if (eixoX > 0.0 && eixoY > 0.0)
+                    Console.WriteLine(quadrantes[0]);
+                if (eixoX < 0.0 && eixoY > 0.0)
+                    Console.WriteLine(quadrantes[1]);
+                if (eixoX < 0.0 && eixoY < 0.0)
+                    Console.WriteLine(quadrantes[2]);
+                if (eixoX == 0.0 && eixoY == 0.0)
+                    Console.WriteLine("Origem");
+            }
+        }
+
+        public void Exercicio28()
+        {
+            Console.Clear();
+
+            var vr = new int[3];
+            var vp = new int[3];
+
+            for (var i = 0; i < vr.Length; i++)
+            {
+                vr[i] = int.Parse(Console.ReadLine());
+                vp[i] = vr[i];
+            }
+
+            Array.Sort(vr);
+            Console.Clear();
+
+            foreach (int vrr in vr)
+            {
+                Console.WriteLine(vrr);
+            }
+            Console.WriteLine("");
+            foreach (int vpp in vp)
+            {
+                Console.WriteLine(vpp);
+            }
+        }
+
+        public void Exercicio29()
+        {
+            Console.Clear();
+            var valores = new float[3];
+
+            for (var i = 0; i < valores.Length; i++)
+            {
+                Console.Write($"Valor {i + 1} : ");
+                valores[i] = float.Parse(Console.ReadLine());
+            }
+
+            if (valores[0] < valores[1] + valores[2])
+                Console.WriteLine($"Perimetro = {(float)valores[0] + valores[1] + valores[2]}");
+            else
+                Console.WriteLine($"Area = {(((float)valores[0] + valores[1]) * valores[2]) / 2}");
+        }
+
+        public void Exercicio30()
+        {
+            Console.Clear();
+            var multiplos = new int[2];
+            for (var i = 0; i < multiplos.Length; i++)
+            {
+                multiplos[i] = int.Parse(Console.ReadLine());
+            }
+
+            var result = multiplos[1] / multiplos[0];
+
+            if (result * multiplos[0] == multiplos[1])
+                Console.WriteLine("Sao Multiplos");
+            else
+                Console.WriteLine("Nao sao Multiplos");
+        }
     }
 }
