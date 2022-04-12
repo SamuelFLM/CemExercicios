@@ -9,16 +9,83 @@ namespace Exercicios.Exercicios31_40
     {
         public void Exercicio31()
         {
+            Console.Clear();
+            var triangulo = new double[3];
 
+            for (var i = 0; i < triangulo.Length; i++)
+                triangulo[i] = double.Parse(Console.ReadLine());
+            var trianguloOrd = triangulo.OrderByDescending(x => x).ToArray();
+
+            if (trianguloOrd[0] > 0 && trianguloOrd[1] > 0 && trianguloOrd[2] > 0)
+            {
+                if (trianguloOrd[0] >= trianguloOrd[1] + trianguloOrd[2])
+                    Console.WriteLine("NAO FORMA TRIANGULO");
+
+                if (Math.Pow(trianguloOrd[0], 2) == Math.Pow(trianguloOrd[1], 2) + Math.Pow(trianguloOrd[2], 2))
+                    Console.WriteLine("TRIANGULO RETANGULO");
+
+                if (Math.Pow(trianguloOrd[0], 2) > Math.Pow(trianguloOrd[1], 2) + Math.Pow(trianguloOrd[2], 2))
+                    Console.WriteLine("TRIANGULO OBTUSANGULO");
+
+                if (Math.Pow(trianguloOrd[0], 2) < Math.Pow(trianguloOrd[1], 2) + Math.Pow(trianguloOrd[2], 2))
+                    Console.WriteLine("TRIANGULO ACUTANGULO");
+
+                if (Math.Pow(trianguloOrd[0], 2) == Math.Pow(trianguloOrd[1], 2) && Math.Pow(trianguloOrd[1], 2) == Math.Pow(trianguloOrd[2], 2))
+                    Console.WriteLine("TRIANGULO EQUILATERO");
+
+                if (Math.Pow(trianguloOrd[0], 2) == Math.Pow(trianguloOrd[1], 2) || Math.Pow(trianguloOrd[0], 2) == Math.Pow(trianguloOrd[2], 2) || Math.Pow(trianguloOrd[1], 2) == Math.Pow(trianguloOrd[2], 2))
+                    Console.WriteLine("TRIANGULO ISOSCELES");
+            }
+            else
+                Console.WriteLine("Programa Finalizado");
         }
 
         public void Exercicio32()
         {
+            Console.Clear();
+            var jogo = new short[2];
+
+            for (var i = 0; i < jogo.Length; i++)
+            {
+                jogo[i] = short.Parse(Console.ReadLine());
+            }
+
+            if (jogo[1] >= 1 && jogo[1] <= 24 && jogo[0] >= 1)
+            {
+                if (jogo[0] > jogo[1])
+                {
+                    var calcTempo = (jogo[1] + 24) - jogo[0];
+                    Console.WriteLine($"O JOGO DUROU {calcTempo} HORA(S)");
+                }
+                else
+                {
+                    var calcTempo = jogo[1] - jogo[0];
+                    Console.WriteLine($"O JOGO DUROU {calcTempo} HORA(S)");
+                }
+            }
+            else
+                Console.WriteLine($"O JOGO DUROU {24} HORA(S)");
+
+
 
         }
 
         public void Exercicio33()
         {
+            var tempo = new ushort[4];
+
+            for (var i = 0; i < tempo.Length; i++)
+                tempo[i] = ushort.Parse(Console.ReadLine());
+
+            if (tempo[0] <= 24 && tempo[2] <= 24 && tempo[1] >= 1 && tempo[3] >= 1)
+            {
+                if (tempo[0] - tempo[2] == 1 && tempo[1] - tempo[3] == 1)
+                    Console.WriteLine($"O JOGO DUROU 0 HORA(S) E {60 - 1} MINUTO(S)");
+                else if (tempo[0] - tempo[2] == 0 && tempo[1] - tempo[3] == 0)
+                    Console.WriteLine($"O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)");
+                else
+                    Console.WriteLine($"O JOGO DUROU {tempo[2] - tempo[0]}HORA(S) E {+tempo[3] - tempo[1]} MINUTO(S)");
+            }
 
         }
 
