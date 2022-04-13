@@ -72,31 +72,113 @@ namespace Exercicios.Exercicios31_40
 
         public void Exercicio33()
         {
-            var tempo = new ushort[4];
+            var tempoInicio = new ushort[2];
+            var tempoFinal = new ushort[2];
 
-            for (var i = 0; i < tempo.Length; i++)
-                tempo[i] = ushort.Parse(Console.ReadLine());
+            for (var i = 0; i < tempoInicio.Length; i++)
+                tempoInicio[i] = ushort.Parse(Console.ReadLine());
+            for (var n = 0; n < tempoFinal.Length; n++)
+                tempoFinal[n] = ushort.Parse(Console.ReadLine());
 
-            if (tempo[0] <= 24 && tempo[2] <= 24 && tempo[1] >= 1 && tempo[3] >= 1)
-            {
-                if (tempo[0] - tempo[2] == 1 && tempo[1] - tempo[3] == 1)
-                    Console.WriteLine($"O JOGO DUROU 0 HORA(S) E {60 - 1} MINUTO(S)");
-                else if (tempo[0] - tempo[2] == 0 && tempo[1] - tempo[3] == 0)
-                    Console.WriteLine($"O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)");
-                else
-                    Console.WriteLine($"O JOGO DUROU {tempo[2] - tempo[0]}HORA(S) E {+tempo[3] - tempo[1]} MINUTO(S)");
-            }
+            var timeSpanHoraMinutoSegundoInicio = new TimeSpan(tempoInicio[0], tempoInicio[1], 59);
+            var timeSpanHoraMinutoSegundoFinal = new TimeSpan(tempoFinal[0], tempoFinal[1], 59);
 
+            var calcTempo = timeSpanHoraMinutoSegundoInicio - timeSpanHoraMinutoSegundoFinal;
+            Console.WriteLine($"O JOGO DUROU {Math.Abs(calcTempo.Hours)} HORA(S) E {Math.Abs(calcTempo.Minutes)} MINUTO(S)");
         }
 
         public void Exercicio34()
         {
+            var valorSalario = double.Parse(Console.ReadLine());
+            regras(valorSalario);
 
+            void regras(double valor)
+            {
+                var salario = new double[] { 400.00, 800.00, 1200.00, 2000.00 };
+                var percetualAjuste = new double[] { 0.15, 0.12, 0.10, 0.07, 0.04 };
+                if (valor <= salario[0])
+                    calcValor(valor, percetualAjuste[0]);
+                else if (valor > salario[0] && valor <= salario[1])
+                    calcValor(valor, percetualAjuste[1]);
+                else if (valor > salario[1] && valor <= salario[2])
+                    calcValor(valor, percetualAjuste[2]);
+                else if (valor > salario[2] && valor <= salario[3])
+                    calcValor(valor, percetualAjuste[3]);
+                else
+                    calcValor(valor, percetualAjuste[4]);
+            }
+
+            void calcValor(double valor, double valorPercentual)
+            {
+                Console.WriteLine($"Novo salario: {(valor * valorPercentual) + valor} ");
+                Console.WriteLine($"Reajuste ganho: {valor * valorPercentual} ");
+                Console.WriteLine($"Em percentual: {(int)valorPercentual * 100} % ");
+            }
         }
 
         public void Exercicio35()
         {
+            Console.Clear();
 
+            var entradaNomes = new string[3];
+            for (var i = 0; i < entradaNomes.Length; i++)
+                entradaNomes[i] = Console.ReadLine();
+
+            if (entradaNomes[0] == "vertebrado")
+                Vertebrado(entradaNomes[1], entradaNomes[2]);
+
+            else if (entradaNomes[0] == "invertebrado")
+                Invertebrado(entradaNomes[1], entradaNomes[2]);
+
+            void Vertebrado(string tipo, string tipo2)
+            {
+                var tipoAlimento = new string[] { "carnivoro", "onivoro", "herbivoro" };
+                var tipoAve = new string[] { "aguia", "pomba" };
+                var tipoMamifero = new string[] { "homem", "vaca" };
+
+                if (tipo == "ave")
+                {
+                    if (tipo2 == tipoAlimento[0])
+                        Console.WriteLine(tipoAve[0]);
+
+                    else if (tipo2 == tipoAlimento[1])
+                        Console.WriteLine(tipoAve[1]);
+                }
+
+                else if (tipo == "mamifero")
+                {
+                    if (tipo2 == tipoAlimento[1])
+                        Console.WriteLine(tipoMamifero[0]);
+
+                    else if (tipo2 == tipoAlimento[2])
+                        Console.WriteLine(tipoMamifero[1]);
+                }
+            }
+
+            void Invertebrado(string tipo, string tipo2)
+            {
+                var tipoAlimento = new string[] { "hematofago", "onivoro", "herbivoro" };
+                var tipoInseto = new string[] { "pulga", "largarta" };
+                var tipoAnelideo = new string[] { "sanguessuga", "minhoca" };
+
+                if (tipo == "inseto")
+                {
+                    if (tipo2 == tipoAlimento[0])
+                        Console.WriteLine(tipoInseto[0]);
+
+                    else if (tipo2 == tipoAlimento[2])
+                        Console.WriteLine(tipoInseto[1]);
+                }
+
+                else if (tipo == "anelideo")
+                {
+                    if (tipo2 == tipoAlimento[0])
+                        Console.WriteLine(tipoAnelideo[0]);
+
+                    else if (tipo2 == tipoAlimento[1])
+                        Console.WriteLine(tipoAnelideo[1]);
+                }
+            }
         }
 
         public void Exercicio36()
@@ -167,7 +249,6 @@ namespace Exercicios.Exercicios31_40
             valores = valores.Where(x => x > 0).ToArray();
 
             Console.WriteLine($"{valores.Length} valores positivos");
-
         }
     }
 }
