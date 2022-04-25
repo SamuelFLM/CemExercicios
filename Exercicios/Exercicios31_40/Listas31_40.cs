@@ -200,9 +200,31 @@ namespace Exercicios.Exercicios31_40
 
         public void Exercicio37()
         {
+            var lerSalario = double.Parse(Console.ReadLine());
+            Impostos(lerSalario);
 
+            void Impostos(double salario)
+            {
+                if (salario <= 2000.00)
+                    Console.WriteLine("Isento");
+                else if (salario >= 2000.01 && salario <= 3000.00)
+                    CalcImposto(salario, 1);
+                else if (salario >= 3000.01 && salario <= 4500.00)
+                    CalcImposto(salario, 2);
+                else
+                    CalcImposto(salario, 3);
+            }
 
+            void CalcImposto(double salario, int retornaImposto)
+            {
+                switch (retornaImposto)
+                {
+                    case 1: Console.WriteLine($"{((salario - 2000.00)) * 0.08}"); break;
+                    case 2: Console.WriteLine($"{(80 + ((salario - 3000.00) * 0.18))}"); break;
+                    case 3: Console.WriteLine($"{(350 + ((salario - 4500.00) * 0.28))}"); break;
+                }
 
+            }
         }
 
         public void Exercicio38()
