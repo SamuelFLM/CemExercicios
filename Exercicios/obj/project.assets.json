@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\samuel.lima\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Lazer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\samuel.lima\\Desktop\\Exercicios0-100\\Exercicios\\Exercicios.csproj",
+      "projectUniqueName": "C:\\Users\\Lazer\\OneDrive\\Área de Trabalho\\CemExercicios\\Exercicios\\Exercicios.csproj",
       "projectName": "Exercicios",
-      "projectPath": "C:\\Users\\samuel.lima\\Desktop\\Exercicios0-100\\Exercicios\\Exercicios.csproj",
-      "packagesPath": "C:\\Users\\samuel.lima\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\samuel.lima\\Desktop\\Exercicios0-100\\Exercicios\\obj\\",
+      "projectPath": "C:\\Users\\Lazer\\OneDrive\\Área de Trabalho\\CemExercicios\\Exercicios\\Exercicios.csproj",
+      "packagesPath": "C:\\Users\\Lazer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lazer\\OneDrive\\Área de Trabalho\\CemExercicios\\Exercicios\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\samuel.lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Lazer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -65,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

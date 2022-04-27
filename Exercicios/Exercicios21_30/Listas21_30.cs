@@ -56,9 +56,8 @@ namespace Exercicios.Exercicios21_30
             var valores = new double[3];
 
             for (var i = 0; i < valores.Length; i++)
-            {
                 valores[i] = double.Parse(Console.ReadLine());
-            }
+                
             var delta = Math.Pow(valores[1], 2) - (4 * valores[0] * valores[2]);
 
             if (delta > 0)

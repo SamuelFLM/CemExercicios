@@ -28,3 +28,18 @@ C:\Users\samuel.lima\Desktop\Exercicios0-100\Exercicios\obj\Debug\net6.0\refint\
 C:\Users\samuel.lima\Desktop\Exercicios0-100\Exercicios\obj\Debug\net6.0\Exercicios.pdb
 C:\Users\samuel.lima\Desktop\Exercicios0-100\Exercicios\obj\Debug\net6.0\Exercicios.genruntimeconfig.cache
 C:\Users\samuel.lima\Desktop\Exercicios0-100\Exercicios\obj\Debug\net6.0\ref\Exercicios.dll
+C:\Users\Lazer\OneDrive\Área de Trabalho\CemExercicios\Exercicios\obj\Debug\net6.0\Exercicios.csproj.AssemblyReference.cache
+C:\Users\Lazer\OneDrive\Área de Trabalho\CemExercicios\Exercicios\obj\Debug\net6.0\Exercicios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lazer\OneDrive\Área de Trabalho\CemExercicios\Exercicios\obj\Debug\net6.0\Exercicios.AssemblyInfoInputs.cache
+C:\Users\Lazer\OneDrive\Área de Trabalho\CemExercicios\Exercicios\obj\Debug\net6.0\Exercicios.AssemblyInfo.cs
+C:\Users\Lazer\OneDrive\Área de Trabalho\CemExercicios\Exercicios\obj\Debug\net6.0\Exercicios.csproj.CoreCompileInputs.cache
+C:\Users\Lazer\OneDrive\Área de Trabalho\CemExercicios\Exercicios\obj\Debug\net6.0\Exercicios.dll
+C:\Users\Lazer\OneDrive\Área de Trabalho\CemExercicios\Exercicios\obj\Debug\net6.0\refint\Exercicios.dll
+C:\Users\Lazer\OneDrive\Área de Trabalho\CemExercicios\Exercicios\obj\Debug\net6.0\Exercicios.pdb
+C:\Users\Lazer\OneDrive\Área de Trabalho\CemExercicios\Exercicios\bin\Debug\net6.0\Exercicios.exe
+C:\Users\Lazer\OneDrive\Área de Trabalho\CemExercicios\Exercicios\bin\Debug\net6.0\Exercicios.deps.json
+C:\Users\Lazer\OneDrive\Área de Trabalho\CemExercicios\Exercicios\bin\Debug\net6.0\Exercicios.runtimeconfig.json
+C:\Users\Lazer\OneDrive\Área de Trabalho\CemExercicios\Exercicios\bin\Debug\net6.0\Exercicios.dll
+C:\Users\Lazer\OneDrive\Área de Trabalho\CemExercicios\Exercicios\bin\Debug\net6.0\Exercicios.pdb
+C:\Users\Lazer\OneDrive\Área de Trabalho\CemExercicios\Exercicios\obj\Debug\net6.0\Exercicios.genruntimeconfig.cache
+C:\Users\Lazer\OneDrive\Área de Trabalho\CemExercicios\Exercicios\obj\Debug\net6.0\ref\Exercicios.dll
