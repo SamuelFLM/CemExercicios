@@ -17,5 +17,5 @@ using Exercicios.Exercicios81_90;
 // var li = new Listas61_70();
 // li.Exercicios68();
 var li = new Listas81_90();
-li.Exercicios85();
+li.Exercicios88();
 

@@ -72,7 +72,7 @@ namespace Exercicios.Exercicios81_90
                     Console.WriteLine("TRIANGULO ISOSCELES");
             }
             else
-                Console.WriteLine("Programa Finalizado"); 
+                Console.WriteLine("Programa Finalizado");
         }
 
         public void Exercicios85()
@@ -123,6 +123,125 @@ namespace Exercicios.Exercicios81_90
                 Console.WriteLine("Parabens Acertou");
             else
                 Console.WriteLine($"Errou numero era : {numeroAleatorio}");
+        }
+        public void Exercicios87()
+
+        {
+            var valores = new double[] { 2.0, 4.0, 7.5, 8.0 };
+            var calcMedia = ((valores[0] * 2) + (valores[1] * 3) + (valores[2] * 4) + (valores[3] * 1)) / 10;
+
+            Console.WriteLine($"Media: {calcMedia.ToString("0.0")}");
+            if (calcMedia >= 7.0)
+                Console.WriteLine("Aluno aprovado.");
+            if (calcMedia < 5.0)
+                Console.WriteLine("Aluno reprovado.");
+            if (calcMedia >= 5.0 && calcMedia <= 6.9)
+            {
+                double e = 2.2;
+                Console.WriteLine("Aluno em exame.");
+                Console.Write($"Nota do exame: {e}");
+
+
+                var calc = (calcMedia + e) / 2;
+                if (calc >= 5.0)
+                    Console.WriteLine("Aluno aprovado.");
+                else
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Aluno reprovado.");
+
+                }
+                Console.WriteLine($"Media final: {calc.ToString("0.0")}");
+            }
+        }
+        public void Exercicios88()
+        {
+            double valorCasa = double.Parse(Console.ReadLine());
+            double salarioIndv = double.Parse(Console.ReadLine());
+            short qtdAnos = short.Parse(Console.ReadLine());
+
+            var calcMeses = qtdAnos * 12;
+            var valorMensal = valorCasa / calcMeses;
+            if (valorMensal < salarioIndv * 0.30)
+                Console.WriteLine("Empréstimo aceito");
+            else
+                Console.WriteLine("Empréstimo negado");
+        }
+        public void Exercicios89()
+        {
+            double peso = double.Parse(Console.ReadLine());
+            double altura = double.Parse(Console.ReadLine());
+            var calcImc = peso / Math.Pow(altura, 2);
+
+            if (calcImc < 18.5)
+                Console.WriteLine("Abaixo do peso");
+            else if (calcImc > 18.5 && calcImc <= 25)
+                Console.WriteLine("Peso Ideal");
+            else if (calcImc > 18.5 && calcImc <= 25)
+                Console.WriteLine("Peso Ideal");
+            else if (calcImc > 25 && calcImc <= 30)
+                Console.WriteLine("Sobrepeso");
+            else if (calcImc > 30 && calcImc <= 40)
+                Console.WriteLine("Obesidade");
+            else
+                Console.WriteLine("Obesidade mórbida");
+        }
+        public void Exercicios90()
+        {
+            short carro = 0;
+            double km = 0.0;
+            short op = short.Parse(Console.ReadLine());
+            switch (op)
+            {
+                case 1:
+                    {
+                        short qtdDias = short.Parse(Console.ReadLine());
+                        double kmPecorrido = double.Parse(Console.ReadLine());
+                        calcCarroDiasKm(1,qtdDias,kmPecorrido);
+                    }
+                    break;
+                case2:
+                    {
+                        short qtdDias = short.Parse(Console.ReadLine());
+                        double kmPecorrido = double.Parse(Console.ReadLine());
+                        calcCarroDiasKm(2,qtdDias,kmPecorrido);
+                    }
+                    break;
+            }
+
+            void calcCarroDiasKm(short numero, short dias, double km)
+            {
+                if (numero == 1)
+                {
+                    if (km <= 100)
+                    {
+                        var calcValorDia = 90 * dias;
+                        var calcKm = km * 0.20;
+                        Console.WriteLine($"Total a pagar {calcValorDia * calcKm}");
+                    }
+                    else
+                    {
+                        var calcValorDia = 90 * dias;
+                        var calcKm = km * 0.10;
+                        Console.WriteLine($"Total a pagar {calcValorDia * calcKm}");
+                    }
+                }
+                else if (numero == 2)
+                {
+                    if (km <= 200)
+                    {
+                        var calcValorDia = 150 * dias;
+                        var calcKm = km * 0.30;
+                        Console.WriteLine($"Total a pagar {calcValorDia * calcKm}");
+                    }
+                    else
+                    {
+                        var calcValorDia = 150 * dias;
+                        var calcKm = km * 0.25;
+                        Console.WriteLine($"Total a pagar {calcValorDia * calcKm}");
+                    }
+                }
+            }
         }
     }
 }
